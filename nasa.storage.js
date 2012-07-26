@@ -167,5 +167,5 @@
     }
   }
 })(
-  nasa || {}
+  (typeof nasa === 'undefined') ? {} : nasa
 );
