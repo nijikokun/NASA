@@ -1,15 +1,4 @@
 /**
- * NASA Object
- *
- * This is created only if it doesn't exist, the reason for this is 
- * each module should be allowed to run stand-alone as a single file 
- * and not have any major dependencies on itself.
- * 
- * @type {Object}
- */
-if(typeof nasa == 'undefined') nasa = {};
-
-/**
  * NASA Module
  * Copyright 2012 Nijiko Yonskai (@vizualover) 
  * License AOL <http://aol.nexua.org> (attribute-only-license)
@@ -20,7 +9,7 @@ if(typeof nasa == 'undefined') nasa = {};
  * @param  {Object} nasa The NASA Namespace
  * @return {Module}      NASA Module
  */
-!(function (nasa) {
+(function (nasa) {
   /**
    * Storage Reference Object
    *
@@ -134,7 +123,7 @@ if(typeof nasa == 'undefined') nasa = {};
        * @param  {Object} data Object container holding key:value data.
        * @return {this}
        */
-      import: function (data) {
+      "import": function (data) {
         var key;
         for (key in data) if (data.hasOwnProperty(key)) this.set(key, data[key]);
         return this;
@@ -155,7 +144,7 @@ if(typeof nasa == 'undefined') nasa = {};
        * @param  {Mixed} keys key(s) to remove
        * @return {this}
        */
-      remove: function (keys) {
+      "remove": function (keys) {
         if(Object.prototype.toString.call(keys) === '[object Array]') {
           for(var i = 0; i < keys.length; i++) $store.removeItem(keys[i]);
         } else {
@@ -178,5 +167,5 @@ if(typeof nasa == 'undefined') nasa = {};
     }
   }
 })(
-  nasa
+  nasa || {}
 );
