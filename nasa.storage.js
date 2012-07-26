@@ -7,7 +7,7 @@
  * 
  * @type {Object}
  */
-if(!nasa) nasa = {};
+if(typeof nasa == 'undefined') nasa = {};
 
 /**
  * NASA Module
