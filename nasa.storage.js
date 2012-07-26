@@ -163,6 +163,17 @@ if(typeof nasa == 'undefined') nasa = {};
         }
 
         return this;
+      },
+      
+      /**
+       * Empty the current store completely, wipes all data.
+       * 
+       * @return {this}
+       */
+      empty: function () {
+        $store.clear();
+        
+        return this;
       }
     }
   }
