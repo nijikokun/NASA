@@ -113,7 +113,7 @@ var nasa = (typeof nasa === 'undefined' || typeof nasa !== 'object') ? {} : nasa
               value = JSON.parse($store.getItem(keys[i]));
               if (value !== null) {
                 if (!exists) exists = true;
-                data[keys[i]] = value;
+                data[keys[i]] = check(value);
               }
             }
             data = (exists) ? data : null;
