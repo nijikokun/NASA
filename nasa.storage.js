@@ -1,4 +1,13 @@
 /**
+ * Namespace Check
+ * 
+ * Here we check to see if nasa already exists as a namespace and is an object,
+ * if both of these parameters are true we utilize it, otherwise we create a 
+ * new namespace.
+ */
+var nasa = (typeof nasa === 'undefined' || typeof nasa !== 'object') ? {} : nasa;
+
+/**
  * NASA Module
  * Copyright 2012 Nijiko Yonskai (@vizualover) 
  * License AOL <http://aol.nexua.org> (attribute-only-license)
@@ -167,5 +176,5 @@
     }
   }
 })(
-  (typeof nasa === 'undefined') ? {} : nasa
+  nasa
 );
