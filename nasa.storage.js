@@ -90,7 +90,7 @@ var nasa = (typeof nasa === 'undefined' || typeof nasa !== 'object') ? {} : nasa
        * @return {Object}      The stored data.
        */
       get: function (keys) {
-        var data, value, now = (+new Date), $self = this, i;
+        var data, value, now = (+new Date), $self = this, i, exists = false;
 
         /**
          * Private Data Check function to prevent re-typing this twice.
@@ -98,6 +98,7 @@ var nasa = (typeof nasa === 'undefined' || typeof nasa !== 'object') ? {} : nasa
          * @return {Mixed}       Stored data or null
          */
         function check (data) {
+          if(data === null) return null;
           if("nasa:store" in data)
             if("nasa:expires" in data && now >= data["nasa:expires"])
               $self.remove(keys);
@@ -110,13 +111,17 @@ var nasa = (typeof nasa === 'undefined' || typeof nasa !== 'object') ? {} : nasa
             data = {};
             for (i = 0; i < keys.length; i++) {
               value = JSON.parse($store.getItem(keys[i]));
-              data[keys[i]] = check(value);
+              if (value !== null) {
+                if (!exists) exists = true;
+                data[keys[i]] = value;
+              }
             }
+            data = (exists) ? data : null;
           } else {
             value = JSON.parse($store.getItem(keys));
             data = check(value);
           }
-        } catch (error) {}
+        } catch (error) { console.log(error.message); }
 
         return data;
       },
