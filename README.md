@@ -5,7 +5,7 @@ NASA Modules are a collection of thin javascript wrappers for the HTML5 API. The
 
 ## Existing Wrappers
 
-* [nasa.storage.js](https://github.com/Nijikokun/NASA/blob/master/nasa.storage.js) (localStorage, sessionStorage)
+* [nasa.storage.js](https://github.com/Nijikokun/NASA/blob/master/nasa.storage.js) (localStorage, sessionStorage) [Example Usage](http://jsfiddle.net/hRzyj/)
 
 ## Want to Contribute?
 
