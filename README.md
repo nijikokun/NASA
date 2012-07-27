@@ -34,7 +34,7 @@ The following HTML5 api's currently don't exist, if you want why not adopt it an
    
 2. **Module Boilerplate**
 
-    ```
+    ``` javascript
     /**
      * Namespace Check
      * 
