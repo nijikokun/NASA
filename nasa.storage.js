@@ -18,7 +18,11 @@ var nasa = (typeof nasa === 'undefined' || typeof nasa !== 'object') ? {} : nasa
  * @param  {Object} nasa The NASA Namespace
  * @return {Module}      NASA Module
  */
-(function (nasa) {
+(function (name, definition, context) {
+  if (typeof module !== 'undefined' && module.exports) module.exports = definition();
+  else if (typeof define === 'function' && define.amd) define(name, definition);
+  else context[name] = definition();
+})('storage', function() {
   /**
    * Storage Reference Object
    *
@@ -39,7 +43,7 @@ var nasa = (typeof nasa === 'undefined' || typeof nasa !== 'object') ? {} : nasa
    * 
    * @return {Object} Gives quick methods to accessing localStorage API
    */
-  nasa.storage = function (settings) {
+  return function (settings) {
     var expires;
 
     if (!settings) settings = {};
@@ -180,6 +184,4 @@ var nasa = (typeof nasa === 'undefined' || typeof nasa !== 'object') ? {} : nasa
       }
     }
   }
-})(
-  nasa
-);
+}, nasa);
