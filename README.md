@@ -6,6 +6,7 @@ NASA Modules are a collection of thin javascript wrappers for the HTML5 API. The
 ## Existing Wrappers
 
 * [nasa.storage.js](https://github.com/Nijikokun/NASA/blob/master/nasa.storage.js) (localStorage, sessionStorage) [Example Usage](http://jsfiddle.net/hRzyj/)
+* [nasa.canvas.js](https://github.com/Nijikokun/Nasa/blob/master/nasa.canvas.js) (Canvas, Context)
 
 ## Want to Contribute?
 
@@ -55,11 +56,13 @@ The following HTML5 api's currently don't exist, if you want why not adopt it an
      * @param  {Object} nasa The NASA Namespace
      * @return {Module}      NASA Module
      */
-    (function (nasa) {
+    (function (name, definition, context) {
+      if (typeof module !== 'undefined' && module.exports) module.exports = definition();
+      else if (typeof define === 'function' && define.amd) define(name, definition);
+      else context[name] = definition();
+    })(/* Module Name Goes Here, Example 'canvas' for nasa.canvas */, function() {
       // Code Goes Here, following a two-spaces indention policy!
-    })(
-      nasa
-    );
+    }, nasa);
     ```
 
 3. **Module Tests**
