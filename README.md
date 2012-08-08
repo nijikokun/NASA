@@ -5,8 +5,10 @@ NASA Modules are a collection of thin javascript wrappers for the HTML5 API. The
 
 ## Existing Wrappers
 
-* [nasa.storage.js](https://github.com/Nijikokun/NASA/blob/master/nasa.storage.js) (localStorage, sessionStorage) [Example Usage](http://jsfiddle.net/hRzyj/)
-* [nasa.canvas.js](https://github.com/Nijikokun/Nasa/blob/master/nasa.canvas.js) (Canvas, Context)
+* [nasa.storage.js](https://github.com/Nijikokun/NASA/blob/master/nasa.storage.js) (localStorage, sessionStorage) 
+  * **Examples:** [Storage and Session Usage](http://jsfiddle.net/hRzyj/)
+* [nasa.canvas.js](https://github.com/Nijikokun/Nasa/blob/master/nasa.canvas.js) (Canvas API)
+  * **Examples:** [Basic Shapes](http://jsfiddle.net/4pvS9/), [Bouncing Circle](http://jsfiddle.net/4pvS9/1/)
 
 ## Want to Contribute?
 
