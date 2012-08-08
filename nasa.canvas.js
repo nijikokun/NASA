@@ -198,7 +198,7 @@ var nasa = (typeof nasa === 'undefined' || typeof nasa !== 'object') ? {} : nasa
         for (var i = 0; i < segments.length; i++) {
           segment = segments[i];
           type = Object.keys(segment)[0];
-          if(type in $segments) $context[type].apply($context, segment);
+          if(type in $segments) $context[type].apply($context, segment[type]);
         }
 
         return this;
