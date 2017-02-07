@@ -3,6 +3,27 @@
 
 NASA Modules are a collection of thin javascript wrappers for the HTML5 API. The thought behind these NASA Modules is that each module can be used as a stand-alone module or together as a library. So whether you just need one, or all of them they just work, alone or together.
 
+<div style="margin: 25px;">
+<a href="https://rapidapi.com/package/NasaAPI/functions?utm_source=NASAGitHub&utm_medium=button&utm_content=Vendor_GitHub" style="
+    all: initial;
+    background-color: #498FE1;
+    border-width: 0;
+    border-radius: 5px;
+    padding: 10px 20px;
+    color: white;
+    font-family: 'Helvetica';
+    font-size: 12pt;
+    background-image: url(https://scdn.rapidapi.com/logo-small.png);
+    background-size: 25px;
+    background-repeat: no-repeat;
+    background-position-y: center;
+    background-position-x: 10px;
+    padding-left: 44px;
+    cursor: pointer;">
+  Test on <b>RapidAPI</b>
+</a>
+</div>
+
 ## Existing Wrappers
 
 * [nasa.storage.js](https://github.com/Nijikokun/NASA/blob/master/nasa.storage.js) (localStorage, sessionStorage) 
